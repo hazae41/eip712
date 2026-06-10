@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "name": "@hazae41/eip712",
+  "version": "0.0.0",
+  "description": "EIP-712 encoding for the web",
+  "repository": "github:hazae41/eip712",
+  "author": "hazae41",
+  "scripts": {
+    "process": "zsh -c 'deno x --unstable-worker-options saumon ./src/**/**'",
+    "examine": "deno lint ./src && deno check ./src && deno test -RW ./src",
+    "prepack": "rm -rf ./out && tsc && tscousin"
+  },
+  "files": [
+    "./out"
+  ],
+  "exports": {
+    ".": {
+      "types": "./out/mod.d.ts",
+      "import": "./out/mod.js"
+    }
+  },
+  "devDependencies": {
+    "@hazae41/phobos": "^2.0.16",
+    "@hazae41/tscousin": "^1.0.28",
+    "@types/node": "^25.9.1",
+    "deno": "^2.8.1",
+    "typescript": "^6.0.3"
+  },
+  "keywords": [
+    "typescript",
+    "esmodules",
+    "tested",
+    "unit-tested"
+  ],
+  "dependencies": {
+    "@hazae41/abi": "^1.0.0",
+    "@hazae41/cursor": "^2.2.0",
+    "@hazae41/keccak256": "^2.0.2"
+  }
+}
