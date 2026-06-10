@@ -6,7 +6,6 @@
   "repository": "github:hazae41/eip712",
   "author": "hazae41",
   "scripts": {
-    "process": "zsh -c 'deno x --unstable-worker-options saumon ./src/**/**'",
     "examine": "deno lint ./src && deno check ./src && deno test -RW ./src",
     "prepack": "rm -rf ./out && tsc && tscousin"
   },
