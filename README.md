@@ -1,4 +1,4 @@
-# EIP-712
+# EIP-712: Typed structured data hashing and signing
 
 EIP-712 encoding for the web
 
