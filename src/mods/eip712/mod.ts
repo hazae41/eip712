@@ -24,9 +24,10 @@ export namespace eip712 {
     const head = new EIP712Struct(main, "EIP712Domain", domain).hash()
     const tail = new EIP712Struct(main, primaryType, message).hash()
 
-    const cursor = new Cursor(new Uint8Array(2 + head.length + tail.length))
+    const cursor = new Cursor(new Uint8Array(1 + 1 + head.length + tail.length))
 
-    cursor.writeUint16(6401)
+    cursor.writeUint8(0x19)
+    cursor.writeUint8(0x01)
 
     cursor.write(head)
     cursor.write(tail)
